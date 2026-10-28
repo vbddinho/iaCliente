@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assistente de cadastro</title>
+    <link rel="stylesheet" href="/css/chat.css">
+</head>
+<body>
+    <main class="chat">
+        <header class="chat__topo">
+            <div>
+                <h1 class="chat__titulo">Assistente de cadastro</h1>
+                <p class="chat__subtitulo">A IA pergunta os dados. Você responde no campo abaixo.</p>
+            </div>
+            <button type="button" class="chat__nova js-nova-conversa">Nova conversa</button>
+        </header>
+
+        <section class="chat__mensagens js-mensagens" aria-live="polite">
+            <article class="mensagem mensagem--ia">
+                <p>Olá. Diga o que deseja cadastrar. No momento, o tipo disponível é Cliente.</p>
+            </article>
+        </section>
+
+        <form class="chat__form js-form" autocomplete="off">
+            <label class="chat__label" for="mensagem">Sua mensagem</label>
+            <textarea
+                id="mensagem"
+                class="chat__input js-mensagem"
+                rows="2"
+                placeholder="Escreva aqui..."
+                required
+            ></textarea>
+            <button type="submit" class="chat__enviar js-enviar">Enviar</button>
+            <p class="chat__erro js-erro" hidden></p>
+        </form>
+    </main>
+    <script type="module" src="/js/chat.js"></script>
+</body>
+</html>
